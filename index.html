@@ -5,17 +5,13 @@
     <title>Prog 2: Rasterization Shell</title>
     <script type="text/javascript" src="gl-matrix.js"></script>
     <script type="text/javascript" src="rasterize.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body onload="main();">
     <canvas id="myWebGLCanvas" width="512" height="512"></canvas>
-    <p>Enter the width and height, then click "Submit" to resize the canvas:</p>
-    <form id="frm1" action="">
-      width: <input id="width" type="text"> (default: 512)<br>
-      height: <input id="height" type="text"> (default: 512)<br><br>
-      <input type="button" onclick="resizeCanvas()" value="Submit">
-    </form>
+    <div class="floater">
     <div>
-      <p>Here are the commands for <span style="font-weight: bold">Part 4:</span></p>
+      <p>Here are the commands for <span style="font-weight: bold">Global transformations (all models):</span></p>
       <ul>
         <li><span style="font-style: italic">a and d</span> — translate view left and right along view X</li>
         <li><span style="font-style: italic">w and s</span> — translate view forward and backward along view Z</li>
@@ -27,7 +23,7 @@
       </ul>
     </div>
     <div>
-      <p>Here are the commands for <span style="font-weight: bold">Part 5:</span></p>
+      <p>Here are the commands for <span style="font-weight: bold">Local Transformations (selected model):</span></p>
       <ul>
         <li><span style="font-style: italic">left and right</span> — select and highlight the next/previous triangle set (previous off)</li>
         <li><span style="font-style: italic">up and down</span> — select and highlight the next/previous sphere (previous off)</li>
@@ -41,5 +37,12 @@
         <li><span style="font-style: italic">backspace</span> — undo all sphere and triangle transformations</li>
       </ul>
     </div>
+    </div>
+    <p>Enter the width and height, then click "Submit" to resize the canvas:</p>
+    <form id="frm1" action="">
+      width: <input id="width" type="text"> (default: 512)<br>
+      height: <input id="height" type="text"> (default: 512)<br><br>
+      <input type="button" onclick="resizeCanvas()" value="Resize">
+    </form>
   </body>
 </html>
